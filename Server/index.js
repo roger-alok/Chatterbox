@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import connectDB from "./config/db.js";
 import userRoutes from "./Routes/userRoutes.js";
 import chatRoutes from "./Routes/chatRoutes.js";
@@ -11,6 +12,7 @@ dotenv.config();
 connectDB();
 const app = express();
 
+app.use(cors({ origin: "https://chatterbox-35ds.onrender.com" }));
 app.use(express.json());
 
 app.use("/api/user", userRoutes);
@@ -52,7 +54,7 @@ import { Server } from "socket.io";
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatterbox-35ds.onrender.com/",
   },
 });
 

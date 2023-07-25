@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.2.0",
   "private": true,
-  "proxy": "https://chatterbox-backend-sf1m.onrender.com/",
+  "proxy": "https://chatterbox-backend-sf1m.onrender.com",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.1",
